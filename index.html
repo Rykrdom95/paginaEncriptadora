@@ -2,28 +2,38 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Encriptador</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
   </head>
   <body>
-    <div class="container">
-      <h1>Encriptador</h1>
+    <header><h1>Encriptador</h1></header>
+    <div class="cuadro">
+      
       <form>
-        <label for="input">Texto:</label>
-        <input type="text" id="input" placeholder="Introduce el texto aquí...">
-        <label for="option">Opción:</label>
-        <select id="option">
-          <option value="encrypt">Encriptar</option>
-          <option value="decrypt">Desencriptar</option>
+        <label  for="texto" id="te">Texto:</label>
+        <input type="text" id="texto" placeholder="Introduce el texto aquí...">
+        <br><br>
+        <label for="opciones" id="op">Opciones:</label>
+        <select id="opciones">
+          <option value="encriptar">Encriptar</option>
+          <option value="desencriptar">Desencriptar</option>
         </select>
-        <button type="button" onclick="execute()">Ejecutar</button>
-        <br>
-        <label for="output">Resultado:</label>
-        <input type="text" id="output" readonly>
-        <button type="button" id="copy" onclick="copy()">Copiar</button>
+        <br><br>
+        <button type="button" onclick="ejecutar()">Ejecutar</button>
       </form>
+      <br>
+      <label for="resultado" id="re">Resultado:</label>
+      <input type="text" id="resultado" readonly>
+      <button type="button" onclick="copiar()">Copiar</button>
     </div>
-
-    <script src="script.js"></script>
+    
+<script src="script.js"></script>
   </body>
 </html>
+
